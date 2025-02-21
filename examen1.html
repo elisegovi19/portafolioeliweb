@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Examen Práctico Primer Parcial.</title>
+    <link rel="icon" type="image/jpeg" href="imagenes/CarlsJrLogo.jpeg">
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: black; 
+            color: white; 
+        }
+        header {
+            background-color: orange; /* Fondo naranja para el encabezado */
+            padding: 10px;
+            font-weight: bold;
+        }
+        h1 {
+            color: white; 
+            margin: 0; 
+        }
+        footer {
+            background-color: orange; /* Fondo naranja para el pie de página */
+            padding: 10px;
+            font-weight: bold;
+            text-align: left; 
+        }
+        .disfruta-text {
+            color: black; 
+            font-weight: bold;
+            margin: 0; 
+        }
+        table {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        td {
+            padding: 10px;
+        }
+        .food-image {
+            width: 300px;
+            height: 200px;
+            cursor: pointer;
+        }
+        iframe {
+            width: 400px;
+            height: 300px;
+            border: 1px solid #ccc;
+        }
+        .logo-container {
+            text-align: center; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Programación Web I PRIM25</h1>
+    </header>
+    <section>
+        <h3 style="color: indianred;">Evaluación práctica Parcial 1</h3>
+        <h3 style="color: mediumvioletred;">Profesora: M.C. Imelda Deyanira Hernández Martínez</h3>
+        <h3 style="color: darkviolet;">Alumna: Elizabeth Segovia Martínez</h3>
+    </section>
+    
+    <table>
+        <tr>
+            <td>
+                <div class="logo-container">
+                    <img src="imagenes/CarlsJrLogo_7F2AD699-5056-BFCE-A831260EDB352788-7f2ad4255056bfc.jpeg" 
+                         onclick="cargarImagen('imagenes/CarlsJrLogo_7F2AD699-5056-BFCE-A831260EDB352788-7f2ad4255056bfc.jpeg')" 
+                         style="width: 400px; height: 300px;"> 
+                </div>
+            </td>
+            <td>
+                <iframe id="visor" src=""></iframe>
+            </td>
+        </tr>
+    </table>
+
+    <footer>
+        <p style="text-align: center", class="disfruta-text">Disfruta Carl’s Jr</p>
+    </footer>
+    
+    <table>
+        <tr>
+            <td><img class="food-image" src="imagenes/OIP.jfif" onclick="cargarImagen('imagenes/OIP.jfif')"></td>
+            <td><img class="food-image" src="imagenes/R.jfif" onclick="cargarImagen('imagenes/R.jfif')"></td>
+            <td><img class="food-image" src="imagenes/vasos-godzilla-kong-carls-jr.jpg" onclick="cargarImagen('imagenes/vasos-godzilla-kong-carls-jr.jpg')"></td>
+        </tr>
+    </table>
+
+    <footer>
+        <p style="text-align: center">Universidad Politécnica de San Luis Potosí</p>
+    </footer>
+    <p>Urbano Villalón 500, Col. La Ladrillera</p>
+    
+    <script>
+        function cargarImagen(imagen) {
+            document.getElementById('visor').src = imagen;
+        }
+    </script>
+</body>
+</html>
