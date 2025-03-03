@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sweets</title>
+    <link rel="icon" type="image/jfif" href="imagenes/OIP.jpg">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(to right, #8e44ad, #9b59b6);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: black; font-size: 80px;">EliSweets</h1>
+    <h2 style="text-align: center; color: black; font-size: 30px;">Compra de gomitas</h2>
+    
+    <form action="" method="post">
+        <fieldset>
+            <legend>Información general del cliente</legend>
+            <label>Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" size="25" maxlength="30" title="Nombre" required>   
+
+            <label>Apellido Paterno:</label>
+            <input type="text" name="apellidopaterno" id="apellidopaterno" placeholder="Apellido Paterno" size="25" maxlength="30" title="Apellido Paterno" required>
+            
+            <label>Apellido Materno:</label>
+            <input type="text" name="apellidomaterno" id="apellidomaterno" placeholder="Apellido Materno" size="25" maxlength="30" title="Apellido Materno" required>
+            <br/>
+
+            
+            <label>Nombre de usuario:</label>
+            <input type="text" name="usuario" id="usuario" placeholder="Usuario" size="25" maxlength="30" title="Usuario" required>
+            
+            <label>Password:</label>
+            <input type="password" name="pass" id="pass" size="20" maxlength="20" placeholder="Contraseña">
+            
+            <label>Fecha de registro:</label>
+            <input type="date" name="fecharegistr" id="fecharegistr">
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos de facturación</legend>
+            <label>País</label>
+            <select name="pais" id="pais">
+                <option value="1">México</option>
+                <option value="2">Estados Unidos</option>
+                <option value="3">Alemania</option>
+                <option value="4">Brasil</option>
+                <option value="5">Canadá</option>
+                <option value="6">Corea del Norte</option>
+                <option value="7">Corea del Sur</option>
+                <option value="8">Cuba</option>
+                <option value="9">España</option>
+                <option value="10">Francia</option>
+                <option value="11">Italia</option>
+                <option value="12">Kenia</option>
+                <option value="13">Rusia</option>
+                <option value="14">Venezuela</option>
+                <option value="15">Suiza</option>
+            </select>
+            
+            <label>Ciudad</label>
+            <select name="ciudad" id="ciudad">
+                <option value="1">San Luis Potosí</option>
+                <option value="2">Monterrey</option>
+                <option value="3">Ensenada</option>
+                <option value="4">Ciudad de México</option>
+                <option value="5">Puerto Vallarta</option>
+                <option value="6">Corea del Norte</option>
+                <option value="7">Corea del Sur</option>
+                <option value="8">Guadalajara</option>
+                <option value="9">León</option>
+                <option value="10">Aguascalientes</option>
+                <option value="11">Ciudad Juárez</option>
+                <option value="12">Mexicali</option>
+                <option value="13">Santiago de Querétaro</option>
+                <option value="14">Morelia</option>
+                <option value="15">Rosarito</option>
+            </select>
+            
+            <label>Calle:</label>
+            <input type="text" name="calle" id="calle" placeholder="Calle" size="25" maxlength="30" title="Calle" required><br/>
+            
+            <label>Número de casa:</label>
+            <input type="number" name="numcasa" id="numcasa">
+            
+            <label>Colonia:</label>
+            <input type="text" name="col" id="col" placeholder="Colonia" size="25" maxlength="30" title="Colonia" required>
+            
+            <label>Código Postal:</label>
+            <input type="text" name="cp" id="cp" placeholder="Código postal"></br>
+            
+            <label>R.F.C:</label>
+            <input type="text" name="rfc" id="rfc" placeholder="R.F.C" required>
+            
+            <label>E-mail:</label>
+            <input type="email" name="correo" id="correo" required>
+            
+            <input type="checkbox" name="acepto" id="acepto" checked>
+            <label for="acepto">Acepto términos y condiciones</label>
+            
+            <input type="submit" name="enviar" id="enviar" value="Enviar">
+            <input type="reset" name="restablece" id="restablece" value="Restablecer">
+        </fieldset>
+    </form>
+    
+    <footer style="text-align: right; padding: 10px;">
+        <p>Febrero 2025, SLP.</p>
+    </footer>
+</body>
+</html>
