@@ -3,6 +3,10 @@ ul{
 	width: 20%;
 	padding: 0;
 	margin: 0;
+	height: 100%;
+	background-color: #e3dbf6;
+	position: fixed;
+	overflow: auto;
 }
 li a{
 	display: block;
@@ -18,5 +22,30 @@ li a:hover{
 li a.activo{
 	background-color: #342555;
 	color: white;
-
 }
+.capa1{
+	margin-left: 25%;
+	padding: 12px;
+}
+@font-face{
+	font-family: fuente1;
+	src: url("Jura/Jura-VariableFont_wght.ttf") format("truetype");
+}
+p{
+	text-align: justify;
+	font-family: fuente1;
+}
+h1{
+	  font-family: "Baskervville", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+h2{
+	 font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+
