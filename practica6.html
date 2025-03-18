@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Fuentes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Emblema+One&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sigmar&display=swap" rel="stylesheet">
+    <!--Estilos-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <!--Icono-->
+    <link rel="icon" href="imagenes/brand-volkswagen-png-logo-17.png">
+    <title>VolksWagen</title>
+</head>
+<body>
+    <header>
+            <h1><a class="link" href="#">VolksWagen Potosina</a></h1>
+    </header>
+    <nav class="navegador">
+                <a class="link" href="#" onclick="taiguin_2025()">Modelos recomendados</a>
+                <a class="link" href="#" onclick="taiguin_2025()">Ofertas y promociones</a>
+                <a class="link" href="#" onclick="taiguin_2025()">Contacto</a>
+                <a class="link" href="#" onclick="taiguin_2025()">Más información</a>
+    </nav>
+    <main class="contenedor sombra">
+        
+        <section class="info">
+            <div>
+                <iframe id="frameImagen" src="" frameborder="1" ></iframe>
+            </div>
+            <div class="cajonTexto">
+                <h2 id="nombre"></h2>
+                <p id="precio"></p>
+                <ul>
+                    <li id="motor"></li>
+                    <br>
+                    <li id="detail_1"></li>
+                    <br>
+                    <li id="detail_2"></li>
+                    <br>
+                    <li id="detail_3"></li>
+                    <br>
+                    <li id="detail_4"></li>
+                    <br>
+                </ul>
+            </div>
+            <div>
+                <ul class="lista">
+                    <li class="tipo opcion" onclick="carro1()" id="item1"></li>
+                    <li class="tipo opcion" onclick="carro2()" id="item2"></li>
+                    <li class="tipo opcion" onclick="carro3()" id="item3"></li>
+                    <li class="tipo opcion" onclick="carro4()" id="item4"></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <ul class="navegador">
+                <li id="color_1"></li>
+                <li id="color_2"></li>
+                <li id="color_3"></li>
+                <li id="color_4"></li>
+                <li id="color_5"></li>
+            </ul>
+        </section>
+        <section class="navegador" id="cajaColor" style="opacity: 0;">
+            <div class="color" id="caja_1" onclick="color_1"></div>
+            <div class="color" id="caja_2" onclick="color_2"></div>
+            <div class="color" id="caja_3" onclick="color_3"></div>
+            <div class="color" id="caja_4" onclick="color_4"></div>
+            <div class="color" id="caja_5" onclick="color_5"></div>
+        </section>
+        <section>
+            <fieldset>
+                <form action="">
+                    <legend>Cotiza tu Volkswagen</legend>
+                    <label for="">Nombre</label>
+                    <input type="text" placeholder="Nombre">
+                    <label for="">Apellido Paterno</label>
+                    <input type="text" placeholder="Apellido Paterno">
+                    <label for="">Apellido Materno</label>
+                    <input type="text" placeholder="Apellido Materno">
+                    <br>
+                    <br>
+                    <label class="numero" for="">Número</label>
+                    <input  type="number" placeholder="Número">
+                    <label class="correo" for="">Correo Electrónico</label>
+                    <input  type="email" placeholder="Correo">
+                    <br>
+                    <br>
+                    <label>Fecha de registro</label>
+                    <input type="date" name="fecharegistro" id="fecharegistro">
+                    <br>
+                    <br>
+                    <label for="colores">Selecciona el color deseado</label><br/>   
+                    <input type="color" id="colores" placeholder="Color" />
+                    <br/>
+                    <br/>
+                    <input type="checkbox"/>Me interesa realizar una prueba de manejo</label>
+                    <input type="checkbox" name="acepto" id="acepto" checked>
+                    <label for="acepto">He leído y acepto el Aviso de Privacidad</label>
+
+                    </br>
+                    <button>Enviar Datos</button>
+                </form>
+            </fieldset>
+        </section>
+    </main>
+    <script>
+        function taiguin_2025(){
+            let item1 = document.getElementById("item1");
+            item1.innerHTML="Taigun 2025 Tredline"
+            let item2 = document.getElementById("item2");
+            item2.innerHTML="Taigun 2025 Tredline TSI"
+            let item3 = document.getElementById("item3");
+            item3.innerHTML="Taigun 2025 Comfortline TSI"
+            let item4 = document.getElementById("item4");
+            item4.innerHTML="Taigun 2025 Highline TSI"
+            let color_1 = document.getElementById("color_1");
+            color_1.innerHTML="Amarillo Kurkuma"
+            let color_2 = document.getElementById("color_2");
+            color_2.innerHTML="Rojo Wild Cherry"
+            let color_3 = document.getElementById("color_3");
+            color_3.innerHTML="Plata réflex"
+            let color_4 = document.getElementById("color_4");
+            color_4.innerHTML="Gris Carbon Steel"
+            let color_5 = document.getElementById("color_5");
+            color_5.innerHTML="Azul Rising"
+            cajaColor.style.opacity=1;
+        }
+        function carro1(){
+            let frameImagen = document.getElementById("frameImagen");
+            frameImagen.src ="imagenes/trendline.jpg"
+            let nombre = document.getElementById("nombre");
+            nombre.innerHTML="Taigun 2025 Tredline"
+            let precio = document.getElementById("precio");
+            precio.innerHTML="$398,890 MxN"
+            let motor = document.getElementById("motor");
+            motor.innerHTML="Motor 1.6L MPI 110 Hp"
+            let detail_1 = document.getElementById("detail_1");
+            detail_1.innerHTML="Radio con pantalla tocuh a color de 7's"
+            let detail_2 = document.getElementById("detail_2");
+            detail_2.innerHTML="Sistema de control electrónico de estabilidad(ESC) y 6 bolsas de aire"
+            let detail_3 = document.getElementById("detail_3");
+            detail_3.innerHTML="Testigo de perdida de presión de neumáticos"
+            let detail_4 = document.getElementById("detail_4");
+            detail_4.innerHTML="Panel en negro brilante con iluminación LED en tapa de cajuela"
+        }
+        function carro2(){
+            let frameImagen = document.getElementById("frameImagen");
+            frameImagen.src ="imagenes/trendline_tsi.jpg"
+            let nombre = document.getElementById("nombre");
+            nombre.innerHTML="Taigun 2025 Tredline TSI"
+            let precio = document.getElementById("precio");
+            precio.innerHTML="$453,490 MxN"
+            let motor = document.getElementById("motor");
+            motor.innerHTML="Motor 1.0L TSI 114 Hp"
+            let detail_1 = document.getElementById("detail_1");
+            detail_1.innerHTML="Faros para niebla"
+            let detail_2 = document.getElementById("detail_2");
+            detail_2.innerHTML="Sistema de control electrónico de estabilidad(ESC) y 6 bolsas de aire"
+            let detail_3 = document.getElementById("detail_3");
+            detail_3.innerHTML="Testigo de perdida de presión de neumáticos"
+            let detail_4 = document.getElementById("detail_4");
+            detail_4.innerHTML="Panel en negro brilante con iluminación LED en tapa de cajuela"
+        }
+        function carro3(){
+            let frameImagen = document.getElementById("frameImagen");
+            frameImagen.src ="imagenes/comfortline.jpg"
+            let nombre = document.getElementById("nombre");
+            nombre.innerHTML="Taigun 2025 Comfortline TSI"
+            let precio = document.getElementById("precio");
+            precio.innerHTML="$484,490 MxN"
+            let motor = document.getElementById("motor");
+            motor.innerHTML="Motor 1.0L TSI 114 Hp"
+            let detail_1 = document.getElementById("detail_1");
+            detail_1.innerHTML="Radio con pantalla tocuh a color de 10's y VolksWagen Wireless App-Connect"
+            let detail_2 = document.getElementById("detail_2");
+            detail_2.innerHTML="Cristales traseros oscurecidos(segunda fila y medallón)"
+            let detail_3 = document.getElementById("detail_3");
+            detail_3.innerHTML="Cuadro de instrumentos dígital"
+            let detail_4 = document.getElementById("detail_4");
+            detail_4.innerHTML="Cargador inalámbrico para Smartphone"
+        }
+        function carro4(){
+            let frameImagen = document.getElementById("frameImagen");
+            frameImagen.src ="imagenes/highline.jpg"
+            let nombre = document.getElementById("nombre");
+            nombre.innerHTML="Taigun 2025 Highline TSI"
+            let precio = document.getElementById("precio");
+            precio.innerHTML="$511,485 MxN"
+            let motor = document.getElementById("motor");
+            motor.innerHTML="Motor 1.0L TSI 114 Hp"
+            let detail_1 = document.getElementById("detail_1");
+            detail_1.innerHTML="Cristales traseros oscurecidos(segunda fila y medallón)"
+            let detail_2 = document.getElementById("detail_2");
+            detail_2.innerHTML="Asistente de colisión frontal con freno de emergencia"
+            let detail_3 = document.getElementById("detail_3");
+            detail_3.innerHTML="Techo corredizo con ajuste de altura"
+            let detail_4 = document.getElementById("detail_4");
+            detail_4.innerHTML="Aire acondicionado Climatronic con panel touch de 1 zona"
+        }
+
+    </script>
+</body>
+</html>
