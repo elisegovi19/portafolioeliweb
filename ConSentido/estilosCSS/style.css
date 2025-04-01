@@ -1,0 +1,257 @@
+/*
+Aqui iran todo el estilo general.
+En pocas palabras, lo que se aplicara
+a cualquier pagina de este proyecto
+*/
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 16px;
+}
+header{
+    margin: 0px auto;
+    width: 100%;
+}
+.barra{
+    display: flex;
+    flex-direction: column;
+}
+.sombra{
+    -webkit-box-shadow: 0px 3px 26px 5px rgba(61,61,66,1);
+    -moz-box-shadow: 0px 3px 26px 5px rgba(61,61,66,1);
+    box-shadow: 0px 3px 26px 5px rgba(61,61,66,1);
+}
+/*Contenedor del logo*/
+.contenedor_Logo{/*Div con contenedor del logo y contenedor del titulo*/
+    display: flex;/*Todo se debra mostrar en lateral*/
+    width: 70%;
+}
+.contenedor_Logo a{
+    text-decoration: none;
+    color: black;
+}
+#logo{
+    text-align:left;
+    width: 35%;
+    height:fit-content;
+}
+#contTit{/*Contenedor del titulo*/
+    padding: .05%;
+    text-align: center;
+    text-decoration: none;
+    width:max-content;
+}
+/*Contenedor del logo*/
+/*Contenedor del navegador*/
+.contenedor_navegador{
+    width: 100%;
+    margin: auto;
+}
+.navegador{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+.navegador a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 5% 5%;
+}
+.navegador a:hover{
+    background-color: rgb(214, 255, 241);
+}
+/*Contenedor del navegador*/
+
+#tituPag{
+    text-align: center;
+    font-size: 120%;
+}
+
+/*Contenedor del pie*/
+.pie{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(55, 139, 135);
+    text-align: center;
+}
+.contacto{
+    display: flex;
+    flex-direction: column;
+}
+.pie a{
+    text-decoration: none;
+    color:chocolate;
+}
+.delivery{
+    width:30%;
+    margin: auto;
+    text-align: center;
+}
+/*Contenedor del pie*/
+
+/*Atributos de la página de Inicio*/
+#presentacion{
+    margin: auto;
+    font-size: 150%;
+}
+#info{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+#ubicacion{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+    height: 120%;
+}
+#direcciones{
+    margin: auto;
+}
+#mapa{
+    text-align: center;
+    margin: auto;
+}
+#mapa iframe{
+    margin: auto;
+}
+    /*------CARRUSEL DE IMAGENES------*/
+        /* Estilos del contenedor */
+.carrusel {
+    width: 45%;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+}
+
+        /* Estilos de las imágenes */
+.carrusel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-images img {
+    width: 100%;
+    height: 100%;
+}
+
+        /* Botones de navegación */
+.carrusel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carrusel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 5%;
+    cursor: pointer;
+}
+    /*------CARRUSEL DE IMAGENES------*/
+
+    /*------CARRUSEL DE RESEÑAS------*/
+#reseñas{
+    text-align: center;
+}
+/* Contenedor del carrusel de reseñas */
+.carruselReseñas{
+    width:20%;
+    height: 20%;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    border: 1% solid #ccc;
+    border-radius: 5%;
+}
+
+/* Contenido del carrusel de reseñas*/
+.carrusel-contentRes{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    margin: auto;
+}
+
+/* Estilo de los cuadros de texto */
+.carrusel-Res{
+    width: 100%;
+    padding: 20%;
+    margin: auto;
+    text-align: center;
+    font-size: 100%;
+    background-color: #f4f4f4;
+    border-radius: 5%;
+}
+
+    /*------CARRUSEL DE RESEÑAS------*/
+/*Atributos de la página de Inicio*/
+/*Atributos de la página de Menu*/
+#menuProductos{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+#menu{
+    width: 20%;
+}
+#productos{
+    width: 80%;
+}
+.elemento{
+    text-align: center;
+}
+.elemento a{
+    text-decoration: none;
+    color: black;
+}
+/*Atributos de la página de Menu*/
+
+@media (min-width:768px){
+    .navegador{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .anuncio{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .barra{
+        flex-direction: row;
+    }
+    .contacto{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    /*Inicio*/
+    #info{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #ubicacion{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .principal{
+        flex-direction: row;
+    }
+    /*Menu*/
+    #menuProductos{
+        flex-direction: row;
+    }
+    .carruselReseñas{
+        width:40%;
+    }
+    /* Estilo de los cuadros de texto */
+    .carrusel-Res{
+        width: 60%;
+        padding: 0 30%;
+    }
+}

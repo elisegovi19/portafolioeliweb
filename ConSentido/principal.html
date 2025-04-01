@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilosCSS/style.css">
+    <link rel="icon" href="imagenes/logo.png">
+    <title>ConSentido Café</title>
+</head>
+<body>
+    <header>
+        <div class="barra">
+            <div class="contenedor_Logo">
+                <a href="principal.html">
+                    <div class="contenedor_Logo">
+                        <img id="logo" src="imagenes/logo.png" width="60%" height="30%">
+                        <h1 id="contTit">ConSentido Café</h1>
+                    </div>
+                </a>
+            </div>
+            <div class="contenedor_navegador">
+                <nav class="navegador">
+                    <a href="index.html">Inicio</a>
+                    <a href="subPaginas/promociones.html">Promociones</a>
+                    <a href="subPaginas/menu.html">Menu</a>
+                    <a href="subPaginas/contacto.html">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="info">
+            <div id="presentacion">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p>
+                    En ConSentido Café nos esforzamos en ser<br>
+                    sustentables; promoviendo un comercio<br>
+                    justo, apoyando acciones en favor de nuestro<br>
+                    medio ambiente y la economía local.<br>
+                </p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </div>
+            <div class="carrusel">
+                    <!-- Contenedor de las imágenes -->
+                    <div class="carrusel-images" id="carruselImages">
+                        <img src="imagenes/chilaquiles_Desayuno.jpeg" alt="Foto 1">
+                        <img src="imagenes/bebida_Gratis.jpeg" alt="Foto 2">
+                        <img src="imagenes/malteada_2X1.jpeg" alt="Foto 3">
+                    </div>
+            
+                    <!-- Botones de navegación -->
+                    <div class="carrusel-buttons">
+                        <button onclick="prevImg()">←</button>
+                        <button onclick="nextImg()">→</button>
+                    </div>
+            </div>
+        </section>
+        <section id="reseñas">
+            <h3>Reseñas</h3>
+            <div class="carruselReseñas sombra">
+                <!-- Contenedor de los elementos del carrusel -->
+                <div class="carrusel-contentRes" id="carruselContentRes">
+                    <div class="carrusel-Res">Aqui va la reseña Número 1.</div>
+                    <div class="carrusel-Res">Aqui va la reseña Número 2.</div>
+                    <div class="carrusel-Res">Aqui va la reseña Número 3.</div>
+                </div>
+                <!-- Botones de navegación -->
+                <div class="carrusel-buttons">
+                    <button onclick="resAnterior()">←</button>
+                    <button onclick="resSiguiente()">→</button>
+                </div>
+            </div>
+        </section>
+        <section id="ubicacion">
+            <div id="mapa">
+                <h3>Ubicación</h3>
+
+                <!-- Inserción del mapa con Google Maps -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59124.450555280455!2d-101.04625895198203!3d22.153481423014572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842a9fdc432160b1%3A0x36ce7ea51a1cf62!2sConSentido%20Caf%C3%A9!5e0!3m2!1sen!2smx!4v1743297394640!5m2!1sen!2smx"
+                    width="120%"
+                    height="120%"
+                    style="border:1px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div id="direcciones">
+                <h3>ConSentido Café</h3>
+                <p>
+                    Av. Nicolas Zapata #1505<br>
+                    Parque España 2da Secc<br>
+                    Código postal:78200<br>
+                    San Luis Potosí, S.L.P.<br>
+                </p>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="pie">
+        <div class="contacto">
+            <div class="redes">
+                <h4>Contacto</h4>
+                <a href=""><p>Contáctanos</p></a>
+                <h4>Redes Sociales</h4>
+                <a href=""><p>Facebook</p></a>
+                <a href=""><p>Instagram</p></a>
+                <a href=""><p>Twitter</p></a>
+                <a href=""><p>Tik Tok</p></a>
+                <a href=""><p>WhatsApp</p></a>
+            </div>
+            <div class="delivery">
+                <h4>Pedidos</h4>
+                <a href=""><img src="imagenes/delivery/uberEats.png" width="20%" height="40%"></a>
+            </div>
+        </div>
+        <div class="infoDesarrolladores">
+            <h4>UPSLP</h4>
+            <P>Página Web Desarrollada para la materia de Programación Web I</P>
+            <p>Primavera 2025. Universidad Politécnica de San Luis Potosí</p>
+            <p>Jesús Alvaro Ruíz León</p>
+            <p>Elizabeth Segovia Martínez</p>
+        </div>
+    </footer>
+    <!--Agregar iconos-->
+    <script src="https://kit.fontawesome.com/61cf3edbf5.js" crossorigin="anonymous"></script>
+    <script>
+        /*CARRUSEL FOTOS*/
+        // Variables para el carrusel de fotos
+        const carruselImages = document.getElementById("carruselImages");
+        const totalImages = document.querySelectorAll(".carrusel-images img").length;
+        let index = 0;
+
+        // Función para ir al slide anterior
+        function prevImg() {
+            index = (index > 0) ? index - 1 : totalImages - 1;
+            actualImg();
+        }
+
+        // Función para ir al siguiente slide
+        function nextImg() {
+            index = (index < totalImages - 1) ? index + 1 : 0;
+            actualImg();
+        }
+
+        // Función para actualizar la posición del carrusel
+        function actualImg() {
+            const offset = -index * window.innerWidth*.435; // Ancho de la imagen
+            carruselImages.style.transform = `translateX(${offset}px)`;
+        }
+        /*CARRUSEL FOTOS*/
+        /*-----------------------------------------------------*/
+        /*CARRUSEL DE RESEÑAS*/
+        // Variables del carrusel de reseñas
+        const reseña = document.getElementById("carruselContentRes");
+        const totalItems = document.querySelectorAll(".carrusel-Res").length;
+        let currentIndex = 0;
+
+        // Función para mostrar reseña anterior
+        function resAnterior() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalItems - 1;
+            resActual();
+        }
+
+        // Función para mostrar la siguiente reseña
+        function resSiguiente() {
+            currentIndex = (currentIndex < totalItems - 1) ? currentIndex + 1 : 0;
+            resActual();
+        }
+
+        // Función para actualizar la posición del carrusel
+        function resActual() {
+            const offset = -currentIndex * window.innerWidth*.233; // Ancho del cuadro
+            reseña.style.transform = `translateX(${offset}px)`;
+        }
+        /*CARRUSEL DE RESEÑAS*/
+    </script>
+</body>
+</html>
