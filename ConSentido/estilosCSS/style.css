@@ -1,21 +1,35 @@
-/*
-Aqui iran todo el estilo general.
-En pocas palabras, lo que se aplicara
-a cualquier pagina de este proyecto
-*/
-html{
+/*Aqui iran todo el estilo general. En pocas palabras, lo que se aplicara a cualquier pagina de este proyecto*/
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
     font-size: 62.5%;
 }
 body{
+    background-color: #f6eee3;
     font-size: 16px;
 }
 header{
     margin: 0px auto;
     width: 100%;
 }
+main{
+    margin: auto;
+}
+h1{
+    text-align: center;
+    padding: 14px; 
+}
 .barra{
     display: flex;
     flex-direction: column;
+    /*
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;*/
 }
 .sombra{
     -webkit-box-shadow: 0px 3px 26px 5px rgba(61,61,66,1);
@@ -24,16 +38,23 @@ header{
 }
 /*Contenedor del logo*/
 .contenedor_Logo{/*Div con contenedor del logo y contenedor del titulo*/
-    display: flex;/*Todo se debra mostrar en lateral*/
-    width: 70%;
+    width: 100%;
+    max-width: 1200px; /* Puedes definir un límite máximo si es necesario */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 .contenedor_Logo a{
     text-decoration: none;
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #logo{
     text-align:left;
-    width: 35%;
+    width: 20%;
     height:fit-content;
 }
 #contTit{/*Contenedor del titulo*/
@@ -41,6 +62,7 @@ header{
     text-align: center;
     text-decoration: none;
     width:max-content;
+    font-size: 2.5rem;
 }
 /*Contenedor del logo*/
 /*Contenedor del navegador*/
@@ -50,13 +72,19 @@ header{
 }
 .navegador{
     display: flex;
-    text-align: center;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 .navegador a{
+    padding: 10px 15px;
     text-decoration: none;
     color: rgb(0, 0, 0);
-    padding: 5% 5%;
+}
+@media (max-width: 767px) {
+    .navegador a {
+       padding: 8px 12px;
+    }
+    
 }
 .navegador a:hover{
     background-color: rgb(214, 255, 241);
@@ -72,12 +100,15 @@ header{
 .pie{
     display: flex;
     flex-direction: column;
-    background-color: rgb(55, 139, 135);
+     background-color: #f6eee3;
+    /*background-color: rgb(55, 139, 135);*/
     text-align: center;
+     padding: 20px;
 }
 .contacto{
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 .pie a{
     text-decoration: none;
@@ -93,68 +124,190 @@ header{
 /*Atributos de la página de Inicio*/
 #presentacion{
     margin: auto;
-    font-size: 150%;
+    font-size: 1.5rem;
+    text-align: center;
 }
 #info{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
 }
 #ubicacion{
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin: auto;
-    width: 80%;
-    height: 120%;
+    justify-content: space-between; /* Coloca el mapa y los horarios uno al lado del otro */
+    align-items: flex-start; /* Alinea ambos elementos al inicio verticalmente */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 #direcciones{
     margin: auto;
 }
 #mapa{
+   width: 60%; /* El mapa ocupa el 60% del ancho */
+    height: 400px; /* Altura del mapa */
+}
+#horarios {
+    width: 35%; /* Los horarios ocupan el 35% */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; /* Centra los elementos dentro del contenedor */
+    padding-left: 20px;
+}
+#horarios ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    width: 100%;
+    background-color: white; /* Fondo blanco para los horarios */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para el recuadro */
+    padding: 20px;
+}
+#horarios li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+#horarios h3{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center; /* Centra el título */
+    width: 100%;
+    word-wrap: break-word;
+}
+/* Estilo del título de la sección del mapa */
+.mapa h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center; /* Centra el título */
+    width: 100%;
+    word-wrap: break-word;
+}
+
+/* Estilo del iframe del mapa */
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+@media (max-width: 767px) {
+    #ubicacion {
+       flex-direction: column; /* En pantallas pequeñas, coloca los elementos en columna */
+        padding: 10px;
+        justify-content: center; /* Centra los elementos en la columna */
+    }
+
+    #mapa, #horarios {
+         width: 90%; /* Ambos ocupan el 100% del ancho */
+        margin-bottom: 20px; /* Espaciado entre el mapa y los horarios */
+    }
+    #mapa {
+         height: 250px; 
+    }
+    #horarios {
+       padding-left: 0; /* Elimina el padding izquierdo */
+        margin-top: 20px; /* Agrega un margen superior para separar del mapa */
+    }
+    #horarios h3 {
+        font-size: 1.2rem; /* Reduce el tamaño del título en pantallas pequeñas */
+        margin-bottom: 15px; /* Espacio adicional debajo del título */
+        text-align: center; /* Asegura que el título esté centrado */
+    }
+}
+
+/* Estilo de la sección del video */
+.video {
+    background-color: #f6eee3;
+    padding: 20px;
     text-align: center;
-    margin: auto;
 }
-#mapa iframe{
-    margin: auto;
+
+/* Estilo del título de la sección del video */
+.video h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
+
+/* Estilo del iframe del video */
+.video iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: 0;
+}
+
+
+.texto-inicio {
+    flex: 1 1 45%;
+    text-align: left;
+}
+
+.texto-inicio h2 {
+    font-size: 2.8rem;
+    color: #6b4c3b;
+    margin-bottom: 1rem;
+}
+
+.texto-inicio p {
+    background-color: white !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1) !important;
+    margin: 10px 0 !important;
+    border: 1px solid #ddd !important;
+}
+
+
+
     /*------CARRUSEL DE IMAGENES------*/
         /* Estilos del contenedor */
 .carrusel {
-    width: 45%;
-    overflow: hidden;
-    margin: auto;
-    position: relative;
+    width: 100vw;        /* el ancho del carrusel ocupa todo el espacio */
+    overflow: hidden;   /* se ocultan las imágenes fuera de la vista */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* su posicionamiento es relativo para el contenedor */
+}
+@media (max-width: 767px) {
+    .carrusel {
+          width: 100vw;
+          overflow-x: hidden;
+    }
+     .carrusel-images {
+        width: max-content;
+        animation: slide 40s linear infinite;
+  }
+    .carrusel-images img {
+        width: 20%;
+        max-width: 100vw;
+        height: auto;
+        flex-shrink: 0;
+    }
 }
 
         /* Estilos de las imágenes */
 .carrusel-images {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    width: fit-content; 
+    animation: slide 40s linear infinite; 
 }
 
 .carrusel-images img {
-    width: 100%;
-    height: 100%;
+    width: 30%;  /*se aumenta el tamaño de las imágenes a 30% para hacerlas más grandes */
+    height: auto; 
+    object-fit: cover; 
+
 }
 
-        /* Botones de navegación */
-.carrusel-buttons {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
+/* Animación automática para el carrusel de imágenes */
+@keyframes slide {
+      0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.carrusel-images {
+    animation: slide 40s linear infinite; 
 }
 
-.carrusel-buttons button {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 5%;
-    cursor: pointer;
-}
     /*------CARRUSEL DE IMAGENES------*/
 
     /*------CARRUSEL DE RESEÑAS------*/
@@ -163,8 +316,8 @@ header{
 }
 /* Contenedor del carrusel de reseñas */
 .carruselReseñas{
-    width:20%;
-    height: 20%;
+    width:100%;
+   /* height:50%;*/
     overflow: hidden;
     margin: auto;
     position: relative;
@@ -182,7 +335,7 @@ header{
 /* Estilo de los cuadros de texto */
 .carrusel-Res{
     width: 100%;
-    padding: 20%;
+    padding: 10%;
     margin: auto;
     text-align: center;
     font-size: 100%;
@@ -194,29 +347,55 @@ header{
 /*Atributos de la página de Inicio*/
 /*Atributos de la página de Menu*/
 #menuProductos{
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    gap: 20px; /* Espaciado entre las imágenes */
+    justify-items: center; /* Centra todos los elementos dentro de las celdas */
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+    
+
+    /*width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
+    text-align: center;
+    padding: 20px 0;*/
 }
 #menu{
     width: 20%;
 }
 #productos{
-    width: 80%;
+    width: 100%;
+    margin: auto;
 }
 .elemento{
+    width: 30%;
     text-align: center;
+    padding: 5%;
 }
 .elemento a{
     text-decoration: none;
     color: black;
 }
+.elemento img{
+    width: 100%; /* Asegura que las imágenes no se salgan de su contenedor */
+    max-width: 100%;
+    height: auto;
+}
+.renglon{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    
+}
 /*Atributos de la página de Menu*/
 
 @media (min-width:768px){
     .navegador{
-        flex-direction: row;
+         flex-direction: row;
         justify-content: space-between;
     }
     .anuncio{
@@ -252,6 +431,120 @@ header{
     /* Estilo de los cuadros de texto */
     .carrusel-Res{
         width: 60%;
-        padding: 0 30%;
+        padding: 0 20%;
+    }
+@media (max-width: 767px) {
+    /* Ajustes para pantallas pequeñas */
+    .contenedor_Logo {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .navegador {
+        flex-direction: column;
+    }
+    .carrusel {
+         height: 500px;
+    }
+    .carruselReseñas {
+        width: 100%;
+    }
+    #info {
+        flex-direction: column;
+        text-align: center;
+    }
+    #ubicacion {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navegador a {
+        padding: 8px 12px;
+    }
+    .carrusel-buttons button {
+        padding: 5%;
+    }
+    #logo {
+        width: 50%;
+    }
+    .carrusel-Res {
+        width: 60%;
+    }
+    .carrusel-images img{
+        width: 100%;
     }
 }
+
+
+.tituloMenu{
+    /*1em =16px*/
+    text-align: center;
+    font-size: 2em; /*sutamaño de fuente será 2 veces el tamaño de fuente de su elemento del contenedor*/
+    margin-bottom: 20px;
+    color: #333;
+}
+#productosVenta{
+    width: 100%;
+    max-width: 100vw;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+.fotoDescripcion {
+   display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    width: 100%; 
+    text-align: center;
+}
+.fotoDescripcion img{
+   width: 100%; 
+    max-width: 300px; 
+    height: auto; 
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor de la imagen */
+    transition: transform 0.3s ease;
+}
+.fotoDescripcion img:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la imagen */
+}
+.fotoDescripcion:nth-child(3n+1) {
+    justify-self: center;
+}
+.fotoDescripcion:nth-last-child(1) {
+    justify-self: center;
+}
+.fotoDescripcion p {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+@media (max-width: 767px) {
+    #menuProductos {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+@media (max-width: 480px) {
+    #menuProductos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .fotoDescripcion img {
+        max-width: 250px; 
+    }
+
+    .fotoDescripcion p {
+        font-size: 1.1em; 
+    }
+}
+@media (max-width: 480px) {
+    #menuProductos {
+        grid-template-columns: 1fr; 
+    }
+
+    .fotoDescripcion img {
+        max-width: 200px; 
+    }
+
+    .fotoDescripcion p {
+        font-size: 1em; 
+    }
