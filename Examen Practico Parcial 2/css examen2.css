@@ -1,0 +1,53 @@
+body{
+	background: #5a4678;
+}
+header{
+	text-align: center;
+	background: #d0bbee;
+	 padding: 20px;
+}
+/* boton */
+#mostrar {
+    margin: 40px auto 10px auto;
+    padding: 12px 24px;
+    background-color: #d0bbee;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: block;
+}
+
+
+/* al pasar el mouse sobre el botón se genera el efecto */
+#mostrar:hover {
+    background-color: #cf9fdd;
+    transform: scale(1.05);
+}
+
+/* oculta las imagenes cuando se pasa el mouse sobre el botón */
+#mostrar:hover ~ .galeria {
+    display: none;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.imagen img {
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00000066;
+    transition: transform 0.3s;
+}
+
+.imagen img:hover {
+    transform: scale(1.1);
+}
