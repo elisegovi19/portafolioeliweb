@@ -39,7 +39,7 @@ h1{
 /*Contenedor del logo*/
 .contenedor_Logo{/*Div con contenedor del logo y contenedor del titulo*/
     width: 100%;
-    max-width: 1200px; /* Puedes definir un límite máximo si es necesario */
+    max-width: 1200px; 
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -152,16 +152,16 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center; /* Centra los elementos dentro del contenedor */
+    align-items: center; 
     padding-left: 20px;
 }
 #horarios ul {
-    list-style-type: none; /* Elimina los puntos de la lista */
+    list-style-type: none; 
     padding: 0;
     width: 100%;
-    background-color: white; /* Fondo blanco para los horarios */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para el recuadro */
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
     padding: 20px;
 }
 #horarios li {
@@ -171,7 +171,7 @@ h1{
 #horarios h3{
     font-size: 1.5rem;
     margin-bottom: 10px;
-    text-align: center; /* Centra el título */
+    text-align: center; 
     width: 100%;
     word-wrap: break-word;
 }
@@ -179,7 +179,7 @@ h1{
 .mapa h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    text-align: center; /* Centra el título */
+    text-align: center; 
     width: 100%;
     word-wrap: break-word;
 }
@@ -192,26 +192,26 @@ h1{
 }
 @media (max-width: 767px) {
     #ubicacion {
-       flex-direction: column; /* En pantallas pequeñas, coloca los elementos en columna */
+       flex-direction: column; 
         padding: 10px;
-        justify-content: center; /* Centra los elementos en la columna */
+        justify-content: center; 
     }
 
     #mapa, #horarios {
-         width: 90%; /* Ambos ocupan el 100% del ancho */
-        margin-bottom: 20px; /* Espaciado entre el mapa y los horarios */
+         width: 90%; 
+        margin-bottom: 20px; 
     }
     #mapa {
          height: 250px; 
     }
     #horarios {
-       padding-left: 0; /* Elimina el padding izquierdo */
-        margin-top: 20px; /* Agrega un margen superior para separar del mapa */
+       padding-left: 0; 
+        margin-top: 20px; 
     }
     #horarios h3 {
-        font-size: 1.2rem; /* Reduce el tamaño del título en pantallas pequeñas */
-        margin-bottom: 15px; /* Espacio adicional debajo del título */
-        text-align: center; /* Asegura que el título esté centrado */
+        font-size: 1.2rem; 
+        margin-bottom: 15px; 
+        text-align: center; 
     }
 }
 
@@ -266,7 +266,7 @@ h1{
     overflow: hidden;   /* se ocultan las imágenes fuera de la vista */
     display: flex;
     justify-content: center;
-    align-items: center; /* su posicionamiento es relativo para el contenedor */
+    align-items: center; 
 }
 @media (max-width: 767px) {
     .carrusel {
@@ -310,58 +310,21 @@ h1{
 
     /*------CARRUSEL DE IMAGENES------*/
 
-    /*------CARRUSEL DE RESEÑAS------*/
-#reseñas{
-    text-align: center;
-}
-/* Contenedor del carrusel de reseñas */
-.carruselReseñas{
-    width:100%;
-   /* height:50%;*/
-    overflow: hidden;
-    margin: auto;
-    position: relative;
-    border: 1% solid #ccc;
-    border-radius: 5%;
-}
 
-/* Contenido del carrusel de reseñas*/
-.carrusel-contentRes{
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    margin: auto;
-}
 
-/* Estilo de los cuadros de texto */
-.carrusel-Res{
-    width: 100%;
-    padding: 10%;
-    margin: auto;
-    text-align: center;
-    font-size: 100%;
-    background-color: #f4f4f4;
-    border-radius: 5%;
-}
-
-    /*------CARRUSEL DE RESEÑAS------*/
 /*Atributos de la página de Inicio*/
+
+
 /*Atributos de la página de Menu*/
 #menuProductos{
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
-    gap: 20px; /* Espaciado entre las imágenes */
-    justify-items: center; /* Centra todos los elementos dentro de las celdas */
+    grid-template-columns: repeat(2, 1fr); /* por defecto en pantallas grandes, 2 columnas */
+    gap: 20px;
+    justify-items: center;
     width: 90%;
     margin: auto;
     padding: 20px 0;
     
-
-    /*width: 100%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px 0;*/
 }
 #menu{
     width: 20%;
@@ -371,7 +334,7 @@ h1{
     margin: auto;
 }
 .elemento{
-    width: 30%;
+   width: 100%;
     text-align: center;
     padding: 5%;
 }
@@ -380,8 +343,7 @@ h1{
     color: black;
 }
 .elemento img{
-    width: 100%; /* Asegura que las imágenes no se salgan de su contenedor */
-    max-width: 100%;
+    width: 100%;
     height: auto;
 }
 .renglon{
@@ -421,17 +383,6 @@ h1{
     .principal{
         flex-direction: row;
     }
-    /*Menu*/
-    #menuProductos{
-        flex-direction: row;
-    }
-    .carruselReseñas{
-        width:40%;
-    }
-    /* Estilo de los cuadros de texto */
-    .carrusel-Res{
-        width: 60%;
-        padding: 0 20%;
     }
 @media (max-width: 767px) {
     /* Ajustes para pantallas pequeñas */
@@ -441,13 +392,9 @@ h1{
         text-align: center;
     }
     .navegador {
-        flex-direction: column;
-    }
-    .carrusel {
-         height: 500px;
-    }
-    .carruselReseñas {
-        width: 100%;
+        /*flex-direction: column;*/
+        flex-direction: row;
+        justify-content: space-between;
     }
     #info {
         flex-direction: column;
@@ -489,30 +436,23 @@ h1{
     border-spacing: 10px;
 }
 .fotoDescripcion {
-   display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    transition: transform 0.3s ease;
-    width: 100%; 
+    width: 100%;
     text-align: center;
+    transition: transform 0.3s ease;
 }
 .fotoDescripcion img{
-   width: 100%; 
-    max-width: 300px; 
-    height: auto; 
+    width: 100%;
+    max-width: 300px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra alrededor de la imagen */
-    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 .fotoDescripcion img:hover {
-    transform: scale(1.05); /* Aumenta el tamaño de la imagen */
+     transform: scale(1.05); /* Aumenta el tamaño de la imagen */
 }
-.fotoDescripcion:nth-child(3n+1) {
-    justify-self: center;
-}
-.fotoDescripcion:nth-last-child(1) {
-    justify-self: center;
-}
+
 .fotoDescripcion p {
     font-size: 1.2em;
     font-weight: bold;
@@ -520,31 +460,86 @@ h1{
 }
 @media (max-width: 767px) {
     #menuProductos {
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 @media (max-width: 480px) {
     #menuProductos {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .fotoDescripcion img {
-        max-width: 250px; 
-    }
-
-    .fotoDescripcion p {
-        font-size: 1.1em; 
+        grid-template-columns: 1fr;
     }
 }
-@media (max-width: 480px) {
-    #menuProductos {
-        grid-template-columns: 1fr; 
-    }
 
-    .fotoDescripcion img {
-        max-width: 200px; 
-    }
+#preguntasFrecuentes {
+    width: 90%;
+    margin: auto;
+    padding: 40px 0;
+}
 
-    .fotoDescripcion p {
-        font-size: 1em; 
-    }
+.tituloSeccion {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #6b4f4f;
+}
+
+.faq details {
+    background-color: #f8f4f0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.faq summary {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #3e2723;
+}
+
+.faq p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #555;
+}
+
+.seccionRedes {
+   /* background-color: #fefefe;*/
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.iconosRedes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+
+.iconosRedes a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    text-decoration: none;
+    color: #3e2c23;
+    padding: 12px 20px;
+    border: 2px solid #a05a2c;
+    border-radius: 12px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    font-size: 1.1em;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.iconosRedes a:hover {
+    background-color: #a05a2c;
+    color: #fff;
+    border-color: #8b4b20;
+}
+
+.iconosRedes i {
+    color: inherit;
+}
