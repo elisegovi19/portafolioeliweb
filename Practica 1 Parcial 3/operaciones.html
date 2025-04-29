@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Operaciones con JavaScript</title>
+	<script type="text/javascript" src="operaciones.js"></script>
+	<link rel="stylesheet" href="operaciones.css">
+</head>
+<body>
+	<h1>Resolviendo operaciones con Eli</h1>
+	<form>
+		<label for="num1">Escribe un número:</label>
+		<input type="text" name="num1" id="num1" placeholder="Ingresa el número"></br>
+		<label for="num2">Escribe un número:</label>
+		<input type="text" name="num2" id="num2" placeholder="Ingresa el número"></br>
+
+		<input type="button" name="suma" id="suma" value="Suma" onclick="sumar()">
+		<input type="button" name="resta" id="resta" value="Resta" onclick="restar()">
+		<input type="button" name="multiplicacion" id="multiplicacion" value="Multiplicación" onclick="multiplicar()">
+		<input type="button" name="division" id="division" value="División" onclick="dividir()">
+	</form>
+	<h2>El resultado de la operación es:</h2>
+	<p name="resultado" id="resultado"></p>
+
+</body>
+</html>
