@@ -1,0 +1,89 @@
+#tituloProducto {
+    text-align: center;
+}
+
+#menuPostres {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+}
+
+.contenedorPostres {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin: auto;
+}
+
+.contenedorPostres a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    width: 48%;
+    margin-bottom: 20px;
+    border-radius: 5%;
+    background-color: #dbcdb5;
+    padding: 10px;
+    text-align: center;
+    color: black;
+}
+
+.contenedorPostres a:hover {
+    -webkit-box-shadow: -2px -5px 37px 18px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px -5px 37px 18px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px -5px 37px 18px rgba(0, 0, 0, 0.75);
+    opacity: 1;
+}
+
+.contenedorPostres a img {
+    border-radius: 5%;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.infoPostre {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.infoPostre h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.infoPostre p {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.ingredientesPostre, .costoPostre {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.ingredientesPostre {
+    font-weight: normal;
+}
+
+.costoPostre {
+    color: green;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .contenedorPostres a {
+        width: 30%; /* tres postres por fila */
+    }
+}
+
+@media (max-width: 767px) {
+    .contenedorPostres a {
+        width: 100%; /* un postre por fila */
+    }
+}
+
+
