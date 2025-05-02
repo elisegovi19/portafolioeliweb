@@ -1,0 +1,90 @@
+#tituloProducto {
+    text-align: center;
+}
+
+#menuDesayunos {
+    width: 80%; 
+    margin: auto;
+    text-align: left;
+}
+
+.contenedorDesayunos {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 20px; 
+    margin: auto;
+}
+
+.contenedorDesayunos a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    width: 48%; 
+    margin-bottom: 20px; 
+}
+
+.contenedorDesayunos a:hover {
+    -webkit-box-shadow: -2px -5px 37px 18px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px -5px 37px 18px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px -5px 37px 18px rgba(0, 0, 0, 0.75);
+    opacity: 1;
+}
+
+.contenedorDesayunos a img {
+    border-radius: 5%;
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.infoProducto {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.infoProducto h2 {
+    font-size: 1.8rem; 
+    font-weight: bold;
+}
+
+.infoProducto p {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.ingredientes, .costo {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.ingredientes {
+    font-weight: normal;
+}
+
+.costo {
+    color: green;
+    font-weight: bold;
+}
+
+.itemDesayunos {
+    width: 100%;
+    border-radius: 5%;
+    background-color: #dbcdb5;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenedorDesayunos a {
+        width: 30%; /* tres productos*/
+    }
+}
+
+@media (max-width: 767px) {
+    .contenedorDesayunos a {
+        width: 100%; /* 1 producto por fila */
+    }
+}

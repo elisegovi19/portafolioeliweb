@@ -1,0 +1,91 @@
+#tituloProducto {
+    text-align: center;
+}
+
+#menuPeques {
+    width: 80%; 
+    margin: auto;
+    text-align: left;
+}
+
+.contenedorPeques {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 20px; 
+    margin: auto;
+}
+
+.contenedorPeques a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    width: 48%; 
+    margin-bottom: 20px; 
+  
+}
+
+.contenedorPeques a:hover {
+    -webkit-box-shadow: -2px -5px 37px 18px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px -5px 37px 18px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px -5px 37px 18px rgba(0, 0, 0, 0.75);
+    opacity: 1;
+}
+
+.contenedorPeques a img {
+    border-radius: 5%;
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.infoPeques {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.infoPeques h2 {
+    font-size: 1.8rem; 
+    font-weight: bold;
+}
+
+.infoPeques p {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.ingredientesPeques, .costoPeques {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.ingredientesPeques {
+    font-weight: normal;
+}
+
+.costoPeques {
+    color: green;
+    font-weight: bold;
+}
+
+.itemPeques {
+    width: 100%;
+    border-radius: 5%;
+    background-color: #dbcdb5;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenedorPeques a {
+        width: 30%; /* tres productos*/
+    }
+}
+
+@media (max-width: 767px) {
+    .contenedorPeques a {
+        width: 100%; /* 1 producto por fila */
+    }
+}
