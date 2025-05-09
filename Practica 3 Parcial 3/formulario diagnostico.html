@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diagnóstico Eli</title>
+  <link rel="stylesheet" href="diagnostico.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Diagnóstico de conocimientos sobre Eli Segovi:)</h1>
+
+    <form id="form" class="c">
+      <div class="pregunta">
+        <p>1. ¿Cuál es mi color favorito?</p>
+        <label><input type="radio" name="q1" value="0"> Rosa.</label>
+        <label><input type="radio" name="q1" value="1"> Morado.</label>
+        <label><input type="radio" name="q1" value="0"> Aqua.</label>
+      </div>
+
+      <div class="pregunta">
+        <p>2. ¿Cuál es mi fecha de nacimiento?</p>
+        <label><input type="radio" name="q2" value="0"> 12 de Marzo del 2006.</label>
+        <label><input type="radio" name="q2" value="0"> 03 de Noviembre del 2006.</label>
+        <label><input type="radio" name="q2" value="1"> 10 de Septiembre del 2006.</label>
+      </div>
+
+      <div class="pregunta">
+        <p>3. ¿Qué carrera estudio?</p>
+        <label><input type="radio" name="q3" value="1"> Ingenieria en Tecnologías de la Información.</label>
+        <label><input type="radio" name="q3" value="0"> Ingenieria Industrial.</label>
+        <label><input type="radio" name="q3" value="0"> Ingeneiria en Manufactura.</label>
+      </div>
+
+      <div class="pregunta">
+        <p>4. ¿Cuál es mi cantante favorito?</p>
+        <label><input type="radio" name="q4" value="1"> Manuel Medrano.</label>
+        <label><input type="radio" name="q4" value="0"> Danny Occean.</label>
+        <label><input type="radio" name="q4" value="0"> Ricardo Arjona.</label>
+      </div>
+
+      <div class="pregunta">
+        <p>5. ¿Cuál es mi hobby favorito?</p>
+        <label><input type="radio" name="q5" value="0"> Leer.</label>
+        <label><input type="radio" name="q5" value="0"> Pintar.</label>
+        <label><input type="radio" name="q5" value="1"> Fotografía.</label>
+      </div>
+
+      <div class="pregunta">
+        <p>6. ¿Cuál es mi número de la suerte?</p>
+        <label><input type="radio" name="q6" value="0"> El número 3.</label>
+        <label><input type="radio" name="q6" value="0"> El número 10.</label>
+        <label><input type="radio" name="q6" value="1"> El número 19.</label>
+      </div>
+
+      <div class="pregunta">
+        <p>7. ¿Cuál es mi signo zodiacal?</p>
+        <label><input type="radio" name="q7" value="0"> Tauro.</label>
+        <label><input type="radio" name="q7" value="0"> Escorpio.</label>
+        <label><input type="radio" name="q7" value="1"> Virgo.</label>
+      </div>
+
+
+      <button type="button" onclick="calcularResultados()">Evaluar</button>
+    </form>
+
+    <div id="resultado" class="resultado"></div>
+
+    <div class="grafico">
+      <canvas id="graficaResultados"></canvas>
+    </div>
+
+    <button onclick="generarPDF()">Descargar PDF</button>
+  </div>
+
+  <script src="diag.js"></script>
+</body>
+</html>
