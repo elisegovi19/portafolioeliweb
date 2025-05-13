@@ -317,7 +317,7 @@ h1{
 
 /*Atributos de la página de Menu*/
 #menuProductos{
-    display: grid;
+   display: grid;
     grid-template-columns: repeat(2, 1fr); /* por defecto en pantallas grandes, 2 columnas */
     gap: 20px;
     justify-items: center;
@@ -334,18 +334,19 @@ h1{
     margin: auto;
 }
 .elemento{
-   width: 100%;
+  width: 100%;
     text-align: center;
     padding: 5%;
 }
 .elemento a{
-    text-decoration: none;
+ text-decoration: none;
     color: black;
 }
 .elemento img{
-    width: 100%;
+  width: 100%;
     height: auto;
 }
+
 .renglon{
     margin: auto;
     display: flex;

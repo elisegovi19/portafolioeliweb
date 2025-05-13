@@ -23,7 +23,7 @@
     text-decoration: none;
     width: 48%; 
     margin-bottom: 20px; 
-  
+    color: black;
 }
 
 .contenedorPeques a:hover {
@@ -31,6 +31,9 @@
     -moz-box-shadow: -2px -5px 37px 18px rgba(0, 0, 0, 0.75);
     box-shadow: -2px -5px 37px 18px rgba(0, 0, 0, 0.75);
     opacity: 1;
+}
+.contenedorPeques a:visited {
+    color: black;
 }
 
 .contenedorPeques a img {
