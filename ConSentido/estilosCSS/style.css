@@ -132,109 +132,170 @@ h1{
     text-align: center;
     padding: 20px;
 }
-#ubicacion{
-    display: flex;
-    justify-content: space-between; /* Coloca el mapa y los horarios uno al lado del otro */
-    align-items: flex-start; /* Alinea ambos elementos al inicio verticalmente */
-    width: 100%;
-    padding: 20px;
-    box-sizing: border-box;
-}
-#direcciones{
-    margin: auto;
-}
-#mapa{
-   width: 60%; /* El mapa ocupa el 60% del ancho */
-    height: 400px; /* Altura del mapa */
-}
-#horarios {
-    width: 35%; /* Los horarios ocupan el 35% */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center; 
-    padding-left: 20px;
-}
-#horarios ul {
-    list-style-type: none; 
-    padding: 0;
-    width: 100%;
-    background-color: white; 
-    border-radius: 8px; 
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
-    padding: 20px;
-}
-#horarios li {
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-#horarios h3{
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    text-align: center; 
-    width: 100%;
-    word-wrap: break-word;
-}
-/* Estilo del título de la sección del mapa */
-.mapa h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    text-align: center; 
-    width: 100%;
-    word-wrap: break-word;
+
+#ubicacion {
+  text-align: center;
+  padding: 40px 20px;
+  /*background-color: #faf2e9;*/
 }
 
-/* Estilo del iframe del mapa */
-.mapa iframe {
+#ubicacion h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+#contenedorUbicacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Mapa */
+#mapa {
+  flex: 1 1 60%;
+  min-width: 300px;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+#mapa iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Horarios */
+#horarios {
+  flex: 1 1 35%;
+  min-width: 280px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#horarios h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  text-align: center;
+  width: 100%;
+}
+
+#horarios ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+#horarios li {
+  background-color: #d6c6b4;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+#horarios li span {
+  font-weight: bold;
+  color: #333;
+}
+/* Responsive para móviles */
+@media (max-width: 767px) {
+  #contenedorUbicacion {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #mapa,
+  #horarios {
+    width: 100%;
+  }
+   #horarios {
+    padding: 15px;
+  }
+
+  #horarios li {
+    font-size: 0.95rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #horarios li span {
+    margin-bottom: 4px;
+  }
+}
+
+.video {
+    background-color: #fff9f5;
+    padding: 2rem;
+    text-align: center;
+}
+
+.titulo-video {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.contenedor-videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.video-caja {
+    flex: 1 1 300px;
+    max-width: 32%;
+    aspect-ratio: 9 / 16; /* formato vertical de Facebook */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.video-caja iframe {
     width: 100%;
     height: 100%;
     border: none;
 }
-@media (max-width: 767px) {
-    #ubicacion {
-       flex-direction: column; 
-        padding: 10px;
-        justify-content: center; 
-    }
 
-    #mapa, #horarios {
-         width: 90%; 
-        margin-bottom: 20px; 
-    }
-    #mapa {
-         height: 250px; 
-    }
-    #horarios {
-       padding-left: 0; 
-        margin-top: 20px; 
-    }
-    #horarios h3 {
-        font-size: 1.2rem; 
-        margin-bottom: 15px; 
-        text-align: center; 
+/* Responsivo */
+@media (max-width: 900px) {
+    .video-caja {
+        max-width: 48%;
     }
 }
 
-/* Estilo de la sección del video */
-.video {
-    background-color: #f6eee3;
-    padding: 20px;
-    text-align: center;
+@media (max-width: 600px) {
+    .contenedor-videos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-caja {
+        max-width: 90%;
+    }
 }
 
-/* Estilo del título de la sección del video */
-.video h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
 
-/* Estilo del iframe del video */
-.video iframe {
-    width: 100%;
-    max-width: 560px;
-    height: 315px;
-    border: 0;
-}
+
+
+
+
 
 
 .texto-inicio {
@@ -262,20 +323,29 @@ h1{
     /*------CARRUSEL DE IMAGENES------*/
         /* Estilos del contenedor */
 .carrusel {
-    width: 100vw;        /* el ancho del carrusel ocupa todo el espacio */
-    overflow: hidden;   /* se ocultan las imágenes fuera de la vista */
+    width: 100vw;
+    height: 500px; 
+    overflow: hidden;
+    position: relative;
+    background-color: #fff5f0; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+   /* width: 100vw;        
+    overflow: hidden;   
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center; */
 }
 @media (max-width: 767px) {
     .carrusel {
-          width: 100vw;
-          overflow-x: hidden;
+        height: 250px;
+        /*  width: 100vw;
+          overflow-x: hidden;*/
     }
      .carrusel-images {
-        width: max-content;
         animation: slide 40s linear infinite;
+
+        /*width: max-content;
+        animation: slide 60s linear infinite;*/
   }
     .carrusel-images img {
         width: 20%;
@@ -287,17 +357,32 @@ h1{
 
         /* Estilos de las imágenes */
 .carrusel-images {
-    display: flex;
+     display: flex;
+    width: max-content;
+    height: 100%;
+    animation: slide 60s linear infinite;
+   /* display: flex;
     width: fit-content; 
-    animation: slide 40s linear infinite; 
+    animation: slide 40s linear infinite; */
 }
 
 .carrusel-images img {
-    width: 30%;  /*se aumenta el tamaño de las imágenes a 30% para hacerlas más grandes */
-    height: auto; 
-    object-fit: cover; 
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+
+    /*width: 30%;  /*se aumenta el tamaño de las imágenes a 30% para hacerlas más grandes */
+    /*height: auto; 
+    object-fit: cover; */
 
 }
+
 
 /* Animación automática para el carrusel de imágenes */
 @keyframes slide {
@@ -305,7 +390,7 @@ h1{
   100% { transform: translateX(-50%); }
 }
 .carrusel-images {
-    animation: slide 40s linear infinite; 
+    animation: slide 60s linear infinite; 
 }
 
     /*------CARRUSEL DE IMAGENES------*/
@@ -679,3 +764,150 @@ h1{
     }
 }
 
+#blog {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: #f3ece7; /* fondo cálido */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3e2c23;
+}
+
+#blog h2 {
+    color: #6f4e37;
+    margin-bottom: 15px;
+}
+
+#formularioComentario {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#formularioComentario input,
+#formularioComentario textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #d9cfc4;
+    border-radius: 8px;
+    box-sizing: border-box;
+    background-color: #fffdfc;
+    color: #3e2c23;
+}
+
+#formularioComentario input::placeholder,
+#formularioComentario textarea::placeholder {
+    color: #a97454;
+}
+
+#formularioComentario button {
+    align-self: flex-start;
+    background-color: #6f4e37; 
+    color: white;
+    padding: 10px 22px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+#formularioComentario button:hover {
+    background-color: #5a3a28;
+}
+
+.comentario {
+    background-color: white;
+    border-left: 6px solid #a97454; 
+    padding: 15px 20px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    font-size: 1rem;
+    line-height: 1.5;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+@media screen and (max-width: 768px) {
+    #blog {
+        margin: 15px;
+        padding: 18px;
+    }
+
+    #formularioComentario button {
+        width: 100%;
+    }
+
+    .comentario {
+        font-size: 0.95rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #formularioComentario input,
+    #formularioComentario textarea {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .comentario {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+}
+
+.carrusel2 {
+    width: 100vw;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff9f5;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.carrusel2-images {
+    display: flex;
+    width: max-content;
+    height: 100%;
+    animation: slide2 60s linear infinite;
+}
+
+.carrusel2-images img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+@keyframes slide2 {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+    .carrusel2 {
+        height: 350px;
+    }
+}
+
+@media (max-width: 767px) {
+    .carrusel2 {
+        height: 250px;
+    }
+
+    .carrusel2-images {
+        animation: slide2 40s linear infinite;
+    }
+}
