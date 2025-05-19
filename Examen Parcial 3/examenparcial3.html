@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Examen práctico Parcial 3</title>
+	<link rel="stylesheet" href="estilo.css">
+	<link rel="icon" href="imagenes/estacionamiento.avif">
+</head>
+<body>
+	<section id="pagos" class="seccionFormulario">
+		<h2 class="tituloSeccion">Pagos de estacionamiento</h2>
+		<form id="formEstacion" class="formularioEstacion">
+			<h3 class="subtitulo">Ingresa las horas de estacionamiento:</h3>
+			<input type="number" id="horas" placeholder="Horas de estacionamiento" required min="1">
+
+			<h3 class="subtitulo">Selecciona tu tipo de auto:</h3>
+			<select id="carros" required>
+				<option value="">-- Selecciona --</option>
+				<option value="chico">Auto chico</option>
+				<option value="camioneta">Camioneta</option>
+				<option value="camion">Camión</option>
+			</select>
+
+			<br><br>
+			<input type="button" value="Calcular total a pagar" onclick="calcularPago()">
+			<br><br>
+			<p id="resultado">El total a pagar es de: $</p>
+		</form>
+	</section>
+
+	<script src="examen.js"></script>
+</body>
+</html>
