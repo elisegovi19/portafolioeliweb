@@ -14,27 +14,45 @@
         <link href="css/styles.css" rel="stylesheet" />
 
         <style>
-        .subnav .nav-link {
-            border-radius: 50px;
-            color: rgba(48, 23, 15, 0.9);
-            font-weight: 600;
-            padding: 0.4rem 1rem;
-          }
-          .subnav .nav-link.active {
-            background-color: rgba(39, 19, 12, 0.9);
-            color: rgba(236, 227, 224, 0.9) !important;
-          }
-          .subnav .nav-link:hover {
-            background-color: rgba(34, 15, 9, 0.8);
-            color: rgba(236, 227, 224, 0.9) !important;
-          }
-          </style>
+    /* Subnav personalizada */
+    .subnav .nav-link {
+        border-radius: 50px;
+        color: rgba(48, 23, 15, 0.9);
+        font-weight: 600;
+        padding: 0.4rem 1rem;
+        transition: all 0.3s;
+    }
+    .subnav .nav-link:hover {
+        background-color: rgba(34, 15, 9, 0.8);
+        color: rgba(236, 227, 224, 0.9) !important;
+    }
+    .subnav .nav-link.active {
+        background-color: rgba(39, 19, 12, 0.9) !important;
+        color: rgba(236, 227, 224, 0.9) !important;
+    }
+
+    .subnav .nav-link {
+        transition: background-color 0.3s, color 0.3s;
+    }
+    
+    header .site-heading-upper.text-primary {
+    color: #bb8744df !important; 
+    background-color: transparent !important; 
+    }
+    
+    header, 
+    header .site-heading, 
+    header .site-heading-upper.text-primary {
+    background-color: transparent !important;
+    }
+
+    </style>
 
 
     </head>
     <body>
         <header>
-            <h1 class="site-heading text-center text-faded d-none d-lg-block">
+             <h1 class="site-heading text-center text-faded d-none d-lg-block">
                 <span class="site-heading-upper text-primary mb-3">Zapateria</span>
                 <span class="site-heading-lower">Bicentenario</span>
             </h1>
